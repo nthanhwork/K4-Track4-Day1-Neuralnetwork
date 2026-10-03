@@ -1,0 +1,31 @@
+{
+  "baseline_exp_id": "base-s1",
+  "final_exp_id": "opt-adam-lr0.003",
+  "criterion": "highest validation macro-F1 at minimum validation loss; seed 1 only; supplemental FP16 excluded",
+  "final_cfg": {
+    "exp_id": "opt-adam-lr0.003",
+    "group": "optimizer",
+    "description": "Adam lr sweep",
+    "loss": "ce",
+    "optimizer": "adam",
+    "lr": 0.003,
+    "weight_decay": 0.0,
+    "momentum": 0.9,
+    "batch": 512,
+    "epochs": 20,
+    "hidden": [
+      256,
+      128
+    ],
+    "dropout": 0.0,
+    "init": "he",
+    "clip_norm": null,
+    "precision": "fp32",
+    "seed": 1,
+    "train_probe_size": 50000,
+    "scheduler": null,
+    "prediction": "Adam với moment bậc một/hai có thể hội tụ nhanh ở lr .001 hoặc .003. Mỗi optimizer\nđược thử ít nhất hai lr: SGD momentum ở Part 2, Adam ở đây. Vì lr tối ưu khác nhau,\ncác run Adam đổi cả optimizer và lr; không suy ra thắng tuyệt đối từ một lr chung.",
+    "notes": "Changes optimizer and its tuned lr; betas=(.9,.999), eps=1e-8, wd=0"
+  },
+  "final_val_macro_f1": 0.8687706103378063
+}

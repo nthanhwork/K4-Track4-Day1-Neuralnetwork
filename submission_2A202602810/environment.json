@@ -1,0 +1,7 @@
+{
+  "conda": "base",
+  "python": "3.13.11",
+  "torch": "2.10.0+cu128",
+  "device": "NVIDIA GeForce RTX 3060",
+  "total_time_s": 128.03582279700004
+}
