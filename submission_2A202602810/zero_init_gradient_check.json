@@ -1,0 +1,13 @@
+{
+  "exp_id": "init-zeros",
+  "initial_gradient_norms": {
+    "net.0.weight": 0.0,
+    "net.0.bias": 0.0,
+    "net.3.weight": 0.0,
+    "net.3.bias": 0.0,
+    "net.6.weight": 0.0,
+    "net.6.bias": 0.4967118799686432
+  },
+  "device": "cpu",
+  "batch": 512
+}

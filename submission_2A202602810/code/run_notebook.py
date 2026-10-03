@@ -18,4 +18,11 @@ if __name__ == '__main__':
         client.execute()
     finally:
         nbformat.write(nb, path)
+    from evidence import refresh_notebook
+    from results_table import load_results
+    output_root = path.parent.parent
+    if not (output_root/'results').exists():
+        output_root = output_root/'submission_2A202602810'
+    refresh_notebook(nb, load_results(output_root/'results'))
+    nbformat.write(nb, path)
     print('Notebook completed:', path, flush=True)
